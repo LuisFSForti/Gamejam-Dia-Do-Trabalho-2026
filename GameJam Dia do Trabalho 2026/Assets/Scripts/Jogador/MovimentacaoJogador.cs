@@ -35,14 +35,20 @@ public class MovimentacaoJogador : MonoBehaviour
 
     void Update()
     {
+        if (Pause.s_Pause.Pausado)
+            return;
+
         if (this.transform.position.y < _alturaMorte)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 
     private void FixedUpdate()
     {
+        if (Pause.s_Pause.Pausado)
+            return;
+
         Vector2 inputJogador = _acaoAndar.action.ReadValue<Vector2>();
         Vector3 movimento = _corpoVisual.forward * inputJogador.y + _corpoVisual.right * inputJogador.x;
 

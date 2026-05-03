@@ -6,7 +6,6 @@ public class CameraJogador : MonoBehaviour
     [SerializeField] private Transform _corpo;
     [SerializeField] private InputActionReference _acaoOlhar;
 
-    private float _sens = 0.2f;
     private float _rotacaoEixoX = 0, _rotacaoEixoY = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,7 +18,10 @@ public class CameraJogador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 movimentoMouse = _acaoOlhar.action.ReadValue<Vector2>() * _sens;
+        if (Pause.s_Pause.Pausado)
+            return;
+
+        Vector2 movimentoMouse = _acaoOlhar.action.ReadValue<Vector2>() * Sensibilidade.s_Sensbilidade.Sens;
 
         _rotacaoEixoY += movimentoMouse.x;
         _rotacaoEixoX -= movimentoMouse.y;

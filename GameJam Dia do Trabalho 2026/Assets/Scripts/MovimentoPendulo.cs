@@ -22,7 +22,7 @@ public class MovimentoPendulo : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_lancado)
+        if (!_lancado || Pause.s_Pause.Pausado)
             return;
 
         float altura = _corpo.position.y;
