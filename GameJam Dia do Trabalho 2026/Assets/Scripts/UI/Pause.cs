@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -10,9 +11,11 @@ public class Pause : MonoBehaviour
     public static Pause s_Pause;
 
     [SerializeField] private GameObject _canvas;
-    [SerializeField] private Slider _slider;
-    [SerializeField] private TMP_Text _txtSlider;
+    [SerializeField] private Slider _sliderSens, _sliderVol;
+    [SerializeField] private TMP_Text _txtSliderSens, _txtSliderVol;
     [SerializeField] private InputActionReference _acaoPausar;
+
+    [SerializeField] private AudioSource _fonteMusica;
 
     public bool Pausado => _canvas.activeSelf;
 
@@ -23,13 +26,24 @@ public class Pause : MonoBehaviour
 
     void Start()
     {
-        _slider.value = Sensibilidade.s_Sensbilidade.Sens;
-        _txtSlider.text = Sensibilidade.s_Sensbilidade.Sens.ToString("0.00");
+        _sliderSens.value = ConfigsEstaticas.s_Configs.Sens;
+        _txtSliderSens.text = ConfigsEstaticas.s_Configs.Sens.ToString("0.00");
 
-        _slider.onValueChanged.AddListener((float val) =>
+        _sliderVol.value = ConfigsEstaticas.s_Configs.Volum;
+        _txtSliderVol.text = ConfigsEstaticas.s_Configs.Volum.ToString("0.00");
+        _fonteMusica.volume = 1;
+        _fonteMusica.outputAudioMixerGroup.audioMixer.SetFloat("MasterVolume", ConfigsEstaticas.s_Configs.VolumDB);
+
+        _sliderSens.onValueChanged.AddListener((float val) =>
         {
-            Sensibilidade.s_Sensbilidade.Sens = val;
-            _txtSlider.text = val.ToString("0.00");
+            ConfigsEstaticas.s_Configs.Sens = val;
+            _txtSliderSens.text = ConfigsEstaticas.s_Configs.Sens.ToString("0.00");
+        });
+        _sliderVol.onValueChanged.AddListener((float val) =>
+        {
+            ConfigsEstaticas.s_Configs.Volum = val;
+            _txtSliderVol.text = ConfigsEstaticas.s_Configs.Volum.ToString("0.00");
+            _fonteMusica.outputAudioMixerGroup.audioMixer.SetFloat("MasterVolume", ConfigsEstaticas.s_Configs.VolumDB);
         });
 
         _canvas.SetActive(false);

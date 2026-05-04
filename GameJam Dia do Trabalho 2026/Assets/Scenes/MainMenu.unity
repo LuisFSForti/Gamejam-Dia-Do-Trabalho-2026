@@ -366,7 +366,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1712854624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.12869924}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -409,6 +409,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134113550}
   m_CullTransparentMesh: 1
+--- !u!1 &365972437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365972439}
+  - component: {fileID: 365972438}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &365972438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365972437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+--- !u!4 &365972439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365972437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 80.195946, y: -50.62718, z: -346.09827}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650364907
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,8 +1033,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Modelo da Grua: feito por Chamod1999\nLink: https://sketchfab.com/3d-models/tower-crane-49851dc7a51b43bda6aea06856c26a85\n\nModelo
-    da Boina: Feito por noyou\nhttps://sketchfab.com/3d-models/headwear-b174a13ed4b048828919006fe489440f\u200B"
+  m_text: "Modelo da Grua: feito por Chamod1999\nhttps://sketchfab.com/3d-models/tower-crane-49851dc7a51b43bda6aea06856c26a85\n\nModelo
+    da Boina: feito por noyou\nhttps://sketchfab.com/3d-models/headwear-b174a13ed4b048828919006fe489440f\n\nM\xFAsica
+    de fundo: Tuxedo Junction - Glenn Miller\nhttps://youtu.be/qZJ5ecPHgQ8?si=loU-QAg37BDycYKr\n\nSom
+    de vit\xF3ria: v\xEDdeo de mikehamblin6272\nhttps://www.youtube.com/shorts/OZMXOfyndiw\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1102,7 +1153,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00012207031}
-  m_SizeDelta: {x: 0, y: -202.47299}
+  m_SizeDelta: {x: 0, y: 87.30701}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1087908556
 MonoBehaviour:
@@ -1212,15 +1263,10 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 'Modelo da Grua: feito por Chamod1999
-
-    Link: https://sketchfab.com/3d-models/tower-crane-49851dc7a51b43bda6aea06856c26a85
-
-
-    Modelo
-    da Boina: Feito por noyou
-
-    https://sketchfab.com/3d-models/headwear-b174a13ed4b048828919006fe489440f'
+  m_Text: "Modelo da Grua: feito por Chamod1999\nhttps://sketchfab.com/3d-models/tower-crane-49851dc7a51b43bda6aea06856c26a85\n\nModelo
+    da Boina: feito por noyou\nhttps://sketchfab.com/3d-models/headwear-b174a13ed4b048828919006fe489440f\n\nM\xFAsica
+    de fundo: Tuxedo Junction - Glenn Miller\nhttps://youtu.be/qZJ5ecPHgQ8?si=loU-QAg37BDycYKr\n\nSom
+    de vit\xF3ria: v\xEDdeo de mikehamblin6272\nhttps://www.youtube.com/shorts/OZMXOfyndiw"
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 1
@@ -1690,8 +1736,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 134113552}
   m_HandleRect: {fileID: 134113551}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 1
+  m_Value: 1.0000014
+  m_Size: 0.87130076
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1987,7 +2033,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -3141,3 +3187,4 @@ SceneRoots:
   - {fileID: 1813448444}
   - {fileID: 1129374073}
   - {fileID: 875593266}
+  - {fileID: 365972439}

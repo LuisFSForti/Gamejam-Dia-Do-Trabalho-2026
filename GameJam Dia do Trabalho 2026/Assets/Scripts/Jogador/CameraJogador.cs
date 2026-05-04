@@ -39,7 +39,7 @@ public class CameraJogador : MonoBehaviour
         if (Pause.s_Pause.Pausado)
             return;
 
-        Vector2 movimentoMouse = _acaoOlhar.action.ReadValue<Vector2>() * Sensibilidade.s_Sensbilidade.Sens;
+        Vector2 movimentoMouse = _acaoOlhar.action.ReadValue<Vector2>() * ConfigsEstaticas.s_Configs.Sens;
 
         _rotacaoEixoY += movimentoMouse.x;
         _rotacaoEixoX -= movimentoMouse.y;
