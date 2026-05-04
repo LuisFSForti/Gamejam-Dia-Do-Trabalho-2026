@@ -40,7 +40,7 @@ public class MovimentacaoJogador : MonoBehaviour
 
         if (this.transform.position.y < _alturaMorte)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

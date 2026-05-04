@@ -6,13 +6,31 @@ public class CameraJogador : MonoBehaviour
     [SerializeField] private Transform _corpo;
     [SerializeField] private InputActionReference _acaoOlhar;
 
-    private float _rotacaoEixoX = 0, _rotacaoEixoY = 0;
+    private float _rotacaoEixoX, _rotacaoEixoY;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void DefinirRotacao(Quaternion rotacao)
+    {
+        _rotacaoEixoX = rotacao.eulerAngles.x;
+        _rotacaoEixoY = rotacao.eulerAngles.y;
     }
 
     // Update is called once per frame
